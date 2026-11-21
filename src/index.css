@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+/* Colours and type from Bruno's prototype (kromos-painel-usinas). The prototype names Inter but never
+   loads it, so most screens fell back to Arial; here Inter is bundled with the app. */
+@theme {
+  --font-sans: "Inter Variable", Inter, Arial, sans-serif;
+
+  --color-ink: #182c48;        /* text */
+  --color-ink-soft: #263d57;   /* headings inside cards */
+  --color-muted: #8291a1;
+  --color-faint: #9aa7b4;      /* small print */
+  --color-canvas: #f3f6fa;     /* page background */
+  --color-line: #edf0f4;       /* card borders */
+  --color-field: #e2e8ee;      /* input borders */
+  --color-tint: #f7f9fb;       /* field backgrounds */
+
+  --color-navy: #142941;       /* sidebar */
+  --color-navy-deep: #10243d;
+  --color-orange: #ee7c38;     /* buttons */
+  --color-orange-hover: #d86b2c;
+  --color-orange-soft: #fff1e5;
+  --color-blue: #1688b4;
+  --color-green: #2aa987;
+
+  --shadow-card: 0 3px 12px #17355308;
+}
+
+@layer base {
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+    /* The prototype used the browser's default line height; Tailwind's 1.5 spread every block apart. */
+    line-height: normal;
+  }
+  button { cursor: pointer; }
+  input, select, textarea { color: var(--color-ink); }
+}
+
+/* Shared field look (the prototype styled every input, select and textarea the same way). */
+@utility field {
+  width: 100%;
+  border: 1px solid var(--color-field);
+  border-radius: 9px;
+  background: white;
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: 400;
+  &:focus { outline: 2px solid #1688b455; outline-offset: 1px; }
+  &:disabled { background: #fafbfc; }
+}
+
+/* Uppercase micro-labels ("PAINEL DE GESTÃO"). */
+@utility smallcaps {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  font-weight: 800;
+}

@@ -1,0 +1,93 @@
+import type { DocFolder } from '@/types/domain'
+
+// The 11 pre-construction folders and their items, as in Bruno's prototype (from the Kromos manual).
+
+export const docFolders: DocFolder[] = [
+  { id: '1', name: '1 Acesso e conexão', items: [
+    'Parecer de acesso ou orçamento de conexão',
+    'CCR',
+    'CUSD',
+    'Documentos e anexos da rede de conexão',
+    'Autorizações e aprovações da concessionária aplicáveis à preparação e ao início da obra',
+  ] },
+  { id: '2', name: '2 Fundiário e ambiental', items: [
+    'Matrícula do imóvel',
+    'Contrato de locação ou arrendamento, conforme adotado',
+    'Contrato de cessão',
+    'CAR',
+    'Licença ambiental',
+    'Demais autorizações ambientais aplicáveis',
+    'Documentos de dispensa, quando aplicável',
+    'Condicionantes e respectivos prazos',
+  ] },
+  { id: '3', name: '3 Localização e estudos da usina', items: [
+    'Arquivo KMZ',
+    'Layout da usina',
+    'Levantamento topográfico',
+    'Levantamentos e estudos do solo necessários aos projetos',
+    'Relatório PVsyst com premissas e resultados de geração',
+  ] },
+  { id: '4', name: '4 Equipamentos e documentação fiscal', items: [
+    'Datasheets de todos os equipamentos, incluindo módulos, inversores, transformadores e cabine',
+    'Datasheets dos demais equipamentos previstos',
+    'Notas fiscais vinculadas aos equipamentos e à usina; comprovantes e condições de garantia; datas de início e de vencimento das garantias',
+    'Quando houver BESS: datasheets das baterias, PCS, EMS e demais componentes previstos',
+  ] },
+  { id: '5', name: '5 Contratação EPC', items: [
+    'Proposta ou orçamento técnico EPC',
+    'Proposta ou orçamento comercial EPC',
+    'Orçamento analítico',
+    'Matriz de responsabilidades e obrigações',
+    'Termo de cessão para faturamento direto',
+    'Minuta do contrato EPC e suas revisões',
+    'Contrato EPC assinado e anexos formalizados',
+    'Aditivos, quando houver',
+  ] },
+  { id: '6', name: '6 Projetos executivos e memoriais EPC', items: [
+    'Projeto unifilar',
+    'Projeto trifilar, quando necessário',
+    'Projetos civis, de fundações e estruturas',
+    'Memorial de cálculo das fundações',
+    'Projeto de drenagem, dimensionamento e memorial de cálculo',
+    'Projeto e memorial de cálculo do aterramento',
+    'Projetos elétricos e de proteção',
+    'Projeto da rede de conexão, conforme escopo',
+    'Demais projetos executivos necessários',
+    'Quando houver BESS: projetos, estudos e documentos de integração',
+  ] },
+  { id: '7', name: '7 Planejamento físico e financeiro EPC', items: [
+    'Cronograma físico',
+    'Cronograma financeiro',
+    'Vinculação entre etapas, marcos de medição e desembolsos previstos',
+    'Versões aprovadas e revisões dos cronogramas',
+  ] },
+  { id: '8', name: '8 Seguros e garantias', items: [
+    'Documentação dos seguros previstos no contrato',
+    'Apólices e endossos, quando houver',
+    'Garantia de adiantamento',
+    'Garantia de performance',
+    'Valores, coberturas, condições e vigências',
+    'Renovações e alterações',
+  ] },
+  { id: '9', name: '9 Responsabilidade técnica qualidade e segurança', items: [
+    'ARTs de projetos, execução e demais serviços aplicáveis',
+    'Plano de qualidade',
+    'Plano de inspeções e testes',
+    'Critérios de aceite',
+    'Checklists preventivos para início das atividades',
+    'Documentos de segurança necessários ao início da obra',
+    'Documentação de mobilização fornecida pela CESBE, conforme requisitos definidos',
+  ] },
+  { id: '10', name: '10 Offtaker e comercialização de energia', items: [
+    'Documentos cadastrais do offtaker',
+    'Contrato de venda de energia ou PPA',
+    'Anexos, revisões e aditivos, quando houver',
+  ] },
+  { id: '11', name: '11 Aprovação e liberação inicial da obra', items: [
+    'Checklist consolidado dos requisitos de início',
+    'Registro das análises e aprovações da Kromos por competência',
+    'Lista de pendências com motivo, responsável e prazo',
+    'Identificação dos requisitos que impedem a liberação',
+    'Registro formal da liberação inicial com responsáveis, data e documentos de suporte',
+  ] },
+]
